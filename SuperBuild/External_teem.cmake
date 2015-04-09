@@ -47,7 +47,7 @@ if(NOT DEFINED Teem_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
   ExternalProject_Add(${proj}
     ${${proj}_EP_ARGS}
     GIT_REPOSITORY "${git_protocol}://github.com/Slicer/teem"
-    GIT_TAG a0ae38afb8913119ca7d584816d81de091fb49d7
+    GIT_TAG 255a138ea9c3fccd2ada3bcd777315203940c514
     SOURCE_DIR ${SOURCE_DOWNLOAD_CACHE}/teem
     BINARY_DIR teem-build
     CMAKE_ARGS -Wno-dev --no-warn-unused-cli
