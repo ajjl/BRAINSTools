@@ -226,6 +226,10 @@ set(CTEST_CUSTOM_WARNING_EXCEPTION
   "teem.src.nrrd.superset.c.*warning"
   "sclanswer.c"
 
+  #proof of concept?
+  "teem.*"
+
+
   # Python - Windows
   "Modules.zlib.gzio"
   "Modules._ctypes.libffi_msvc.ffi.*warning C4018"
