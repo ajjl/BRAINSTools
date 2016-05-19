@@ -46,8 +46,8 @@ if(NOT DEFINED Teem_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
 
   ExternalProject_Add(${proj}
     ${${proj}_EP_ARGS}
-    GIT_REPOSITORY "${git_protocol}://github.com/Slicer/teem"
-    GIT_TAG slicer-2015-04-14-r6245
+    GIT_REPOSITORY "${git_protocol}://github.com/ajjl/teem"
+    GIT_TAG "makeDirectoriesIfNotFound"
     SOURCE_DIR teem
     BINARY_DIR teem-build
     CMAKE_ARGS -Wno-dev --no-warn-unused-cli
@@ -73,6 +73,7 @@ if(NOT DEFINED Teem_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
       -DTeem_VTK_MANGLE:BOOL=OFF ## NOT NEEDED FOR EXTERNAL ZLIB outside of vtk
       -DTeem_PNG_DLLCONF_IPATH:PATH=${VTK_DIR}/Utilities
       -DPNG_PNG_INCLUDE_DIR:PATH=${PNG_INCLUDE_DIR}
+      -DOUTPUT_DIRS_REQUIRED_TO_ALREADY_EXIST="OFF"
       ${EXTERNAL_PROJECT_OPTIONAL_ARGS}
     INSTALL_COMMAND ""
     DEPENDS
